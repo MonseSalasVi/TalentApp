@@ -163,6 +163,8 @@ En este proyecto utilizamos:
 
 ![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/crear_editar_tarea.png)
 
+![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/grafica.png)
+
 ## Despliegue 📦
 
 Para el deploy utilizamos...
