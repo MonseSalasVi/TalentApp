@@ -155,7 +155,13 @@ En este proyecto utilizamos:
 
 ## Nuestro prototipo de alta fidelidad
 
-![alt text](http...)
+![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/access.png)
+
+![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/home_horizontal.png)
+
+![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/home_vertical.png)
+
+![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/crear_editar_tarea.png)
 
 ## Despliegue 📦
 
