@@ -161,17 +161,21 @@ En este proyecto utilizamos:
 
 ![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/home_vertical.png)
 
-![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/crear_editar_tarea.png)
+![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/create_edit_task.png)
 
-![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/grafica.png)
+![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/graphic.png)
 
 \*\* Widget
 
-![alt text]()
+![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/widget.png)
 
 ## Despliegue 📦
 
 Para el deploy utilizamos...
+
+## Diagrama de trabajo Git Hub
+
+![alt text]()
 
 ### Autores ✒️
 
