@@ -175,7 +175,7 @@ Para el deploy utilizamos...
 
 ## Diagrama de trabajo Git Hub
 
-![alt text]()
+![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/Diagram.png)
 
 ### Autores ✒️
 
