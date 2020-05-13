@@ -165,6 +165,10 @@ En este proyecto utilizamos:
 
 ![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/grafica.png)
 
+\*\* Widget
+
+![alt text]()
+
 ## Despliegue 📦
 
 Para el deploy utilizamos...
