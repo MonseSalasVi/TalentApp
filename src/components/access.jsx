@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
+import { getStaffs } from '../UseFetch'
 
 const Access = () => {
   const [user, setUser] = useState('');
+  const [idUser, setIdUser] = useState('');
 
-  function searchUserinData() {
-    console.log(user)
+
+
+  async function searchUserinData() {
+    try {
+      const response = await getStaffs(user)
+      setIdUser(response[0].staffid)
+
+    } catch (error) {
+      alert(error)
+    }
   }
 
   return (
@@ -15,7 +25,7 @@ const Access = () => {
       </div>
       <div className=''>
         <input
-          placeholder='User'
+          placeholder='email'
           onChange={((e) => {
             setUser(e.target.value)
           })}
