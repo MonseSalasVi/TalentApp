@@ -1,6 +1,6 @@
 const token =
     "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoic3F1YWQ0IiwibmFtZSI6InNxdWFkIGZvdXIiLCJwYXNzd29yZCI6bnVsbCwiQVBJX1RJTUUiOjE1ODk0Njg2Mjh9.u__YkhNdmlvnRUj_qwG9UJJK2BV-rxpYsqd34m73XZQ";
-const cubosApiUrl = "https://cubosv2.4040.wtf/api/";
+//const cubosApiUrl = "https://cubosv2.4040.wtf/api/";
 const tasksEndpoint = "https://cubosv2.4040.wtf/api/tasks/";
 const staffsEndpoint = "https://cubosv2.4040.wtf/api/staffs/";
 const staffsEndpointSearch = "https://cubosv2.4040.wtf/api/staffs/search/";
@@ -15,7 +15,7 @@ async function getTasks(taskId) {
     });
     return response.json();
 }
-//REspuesta donde regresa la data de task, esta se agrega al componente donde se va a mostrar la data 
+//REspuesta donde regresa la data de task, esta se agrega al componente donde se va a mostrar la data
 // getTasks("1").then((data) => {
 //     console.log(data);
 // });
@@ -49,4 +49,3 @@ export { getStaffs, getProjects, getTasks };
 // getProjects("1").then((data) => {
 //     console.log(data);
 // });
-

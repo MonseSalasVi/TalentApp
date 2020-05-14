@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { getStaffs } from '../UseFetch'
+import { useHistory } from 'react-router-dom'
 
 const Access = () => {
   const [user, setUser] = useState('');
   const [idUser, setIdUser] = useState('');
+  const history = useHistory()
 
 
 
@@ -11,9 +13,9 @@ const Access = () => {
     try {
       const response = await getStaffs(user)
       setIdUser(response[0].staffid)
-
+      history.push('/dashboard')
     } catch (error) {
-      alert(error)
+      alert('Por Favor Revise sus datos y vuelta a intentar')
     }
   }
 
@@ -26,6 +28,7 @@ const Access = () => {
       <div className=''>
         <input
           placeholder='email'
+          type='email'
           onChange={((e) => {
             setUser(e.target.value)
           })}
