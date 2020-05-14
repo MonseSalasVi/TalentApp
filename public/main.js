@@ -16,9 +16,9 @@ function createWindow() {
     height: 680,
   });
   mainWindow.loadURL(
-    isDev ?
-    "http://localhost:3000" :
-    `file://${path.join(__dirname, "../build/index.html")}`
+    isDev
+      ? "http://localhost:3000"
+      : `file://${path.join(__dirname, "../build/index.html")}`
   );
   if (isDev) {
     // Open the DevTools.
