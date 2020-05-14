@@ -1,15 +1,21 @@
-import React from 'react';
-import './App.css';
-import Navbar from './Navbar/Navbar';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import Access from "./components/access";
+import Menu from "./components/menu";
+import Dashboard from "./components/Dashboard/dashboard";
+import Stats from "./components/stats";
 
 function App() {
   return (
-    <div className='App'>
-      <Navbar />
-      <header className='App-header'>
-        <p>hola</p>
-      </header>
-    </div>
+    <Router>
+      <Route exact path="/" component={Access} />
+      <Menu>
+        <Switch>
+          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/dashboard" component={Stats} />
+        </Switch>
+      </Menu>
+    </Router>
   );
 }
 
