@@ -1,6 +1,37 @@
 # Talent App
 
+#### Index
+
+- [Autoras](#Autoras)
+- [Introduction](#Introduction)
+- [Historias de usuario y subtareas](#Historias-de-usuario-y-subtareas)
+    - [Sprint 1](#-sprint-1-)
+    - [Srpint 2](#-sprint-2-)
+    - [Sprint 3](#-sprint-3-)
+    - [Sprint 4](#-sprint-4-)
+    - [Sprint 5](#-sprint-5-)
+- [Herramientas](#Herramientas)
+    - [Herramientas de comunicacion](#Herramientas-de-comunicacion)
+- [Prototipo de alta fidelidad](#Prototipo-de-alta-fidelidad)
+- [Deploy](#Deploy)
+- [Diagrama de flujo en Git Hub](#Diagrama-de-flujo-en-Git-Hub)
+- [Metodo de organizacion](#Metodo-de-organizacion)
+
+
+## Autoras ✒️
+
+El equipo de desarrolladoras que colaborarón a levantar el proyecto desde sus inicios
+
+- Monse Salas([MonseSalasVi](https://github.com/MonseSalasVi)).
+- Karen Ramírez ([KarenRamírez](https://github.com/KARENLABO)).
+- Bianca Cardona ([BiancaCardona](https://github.com/Biancardona)).
+- Claudia Custodio([ClaudiaCustodio](https://github.com/Dionisiaca)).
+- Teresa Carbajal ([TeresaCarbajal](https://github.com/TeresaC21)).
+
+## Introduccion
+
 En este proyecto conformado por un equipo de desarrolladoras de 5 mujeres donde nos enfocamos en construir una aplicación para hacer un registro y balance para gestionar el tiempo en las tareas asignadas donde a estas tareas se les incluye un temporizador y mejorar estimacion para los siguientes proyectos. Esto en base a los requerimientos solicitados por la empresa 4040Apps.
+
 
 ## HISTORIAS DE USUARIO Y SUBTAREAS
 
@@ -145,15 +176,27 @@ Aspectos no funcionales de la historia:
   Como administrador puedo consultar el tiempo total que constituye la sumatoria de las sumatorias de cada tiempo de usuario en cada tarea
   Total del proyecto = UsuarioN.tarea1.total + UsuarioM.tarea1.total…. + UsuarioN.tarea2.total ….. etc
 
-## Herramientas para la construido con 🛠️
+## Herramientas 🛠️
 
 En este proyecto utilizamos:
 
--Librería Javascript - React.
--Manejo en aplicacion - Electron
--Materialize iu - libreria CSS
+* [Reactjs](https://reactjs.org/)
+ * [create-react-app](https://create-react-app.dev/docs/getting-started)
+ * [Electron](https://www.electronjs.org/)
+ * [Materialize UI](https://material-ui.com/)
+ * [Extensiones de Visual Studio Code](https://code.visualstudio.com/)
+    - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+    - [Simple react snippets](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets)
+    - [Live share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
+    - [Git lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+ 
+ ### Herramientas de comunicacion
+     * [Trello](https://trello.com/monserratsalas2/boards)
+     * [Slack](https://slack.com/intl/es-mx/) 
+     * [Hangouts](https://hangouts.google.com/)
+ 
 
-## Nuestro prototipo de alta fidelidad
+## Prototipo de alta fidelidad
 
 ![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/access.png)
 
@@ -169,24 +212,25 @@ En este proyecto utilizamos:
 
 ![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/widget.png)
 
-## Despliegue 📦
+## Deploy 📦
 
 Para el deploy utilizamos...
 
-## Diagrama de trabajo Git Hub
+## Diagrama de flujo en Git Hub
+Todas trabajan sobre su rama Develop.
+Una vez teniendo algo funcional o su tarea terminada, se hace un pull request hacia la rama develop de la master.
+La Develop master Verifica que todo funcione bien y se hace un pull a la Rama master.
+Para bajar los cambios de la master, tenemos una rama remota, y bajamos sus cambios.
 
 ![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/Diagram.png)
 
-### Autores ✒️
+## Metodo de organizacion
+ - Revisión grupal del readme
+ - Establecer prioridades
+ - Investigar herramientas/documentación
+ - Establecer acuerdos
+ - Documento del proyecto
+ - Definir proridades
+ - Asignacion de tareas
 
-El equipo de desarrolladoras que colaborarón a levantar el proyecto desde sus inicios
 
-- Monse Salas.
-- Karen Ramírez.
-- Bianca Cardona.
-- Claudia Costodio.
-- Teresa Carbajal.
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
