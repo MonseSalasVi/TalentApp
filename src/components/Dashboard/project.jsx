@@ -1,16 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Task from "./task";
 import Card from "@material-ui/core/Card";
 import Divider from "@material-ui/core/Divider";
+import { getTasks, getProjects } from "../../UseFetch";
 import Box from "@material-ui/core/Box";
-import { getTasks } from "../../UseFetch";
+        
+getTasks("7").then((data) => {
+  console.log(data);
+});
 
 const Project = () => {
-  const [tasks, setTasks] = useState([{ id: "1" }, { id: "26" }]);
+  const dummyArray = [{ id: "1" }, { id: "4" }, { id: "6" }];
+  const [tasks, setTasks] = useState(dummyArray);
+  const [project, setProject] = useState([]);
+
+  useEffect(() => {
+    getProjects("1").then((data) => {
+      setProject(data);
+    });
+  }, []);
+
   return (
     <>
       <div>
-        <h1>Proyecto</h1>
+        <h1>{project.name}</h1>
         <a href="https://trello.com/claudiacustodiog/boards" target="blank">
           Trello
         </a>
@@ -39,8 +52,8 @@ const Project = () => {
 
       <div>
         <Card>
-          {tasks.map((t) => (
-            <Task taskId={t.id} />
+          {tasks.map((t , i) => (
+            <Task key={i} taskId={t.id />
           ))}
         </Card>
       </div>

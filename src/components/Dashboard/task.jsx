@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "@material-ui/core/Card";
+import CircularProgress from "@material-ui/core/CircularProgress";
 import { getTasks } from "../../UseFetch";
 
 const Task = ({ taskId }) => {
@@ -12,13 +13,13 @@ const Task = ({ taskId }) => {
   }, [taskId]);
 
   return !task ? (
-    <>Loading...</>
+    <CircularProgress />
   ) : (
     //map para las tasks
     <Card>
       <h4>{task.name}</h4>
       <p>00:00:00</p>
-      <p>08/06/20</p>
+      <p>{task.duedate}</p>
     </Card>
   );
 };
