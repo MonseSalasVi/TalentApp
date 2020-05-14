@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Task from "./task";
 import Card from "@material-ui/core/Card";
 import Divider from "@material-ui/core/Divider";
+import { getTasks } from "../../UseFetch";
 
 const Project = () => {
+  const [tasks, setTasks] = useState([{ id: "1" }, { id: "26" }]);
   return (
     <>
-      <h1>Projecto</h1>
+      <h1>Proyecto</h1>
       <a href="https://trello.com/claudiacustodiog/boards" target="blank">
         Trello
       </a>
@@ -19,7 +21,9 @@ const Project = () => {
         <h5>Cronómetro</h5>
       </div>
       <Card>
-        <Task />
+        {tasks.map((t) => (
+          <Task taskId={t.id} />
+        ))}
       </Card>
     </>
   );
