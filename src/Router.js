@@ -12,6 +12,7 @@ import {
 import CheckBoxIcon from "@material-ui/icons/CheckBox";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import AppBar from "./components/AppBar/appBar";
 import Access from "./components/access";
 import Dashboard from "./components/Dashboard/dashboard";
 import Stats from "./components/stats";
