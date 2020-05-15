@@ -48,7 +48,7 @@ const Task = ({ taskId }) => {
               <p>00:00:00</p>
             </Fab>
           </Box>
-          <Box p={1} flexShrink={1} bgcolor="grey.100">
+          <Box p={1} flexShrink={1} bgcolor="grey.00">
             <p>{task.duedate}</p>
           </Box>
         </Box>

@@ -42,6 +42,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SideNav = ({ children }) => {
+  const mystyle = {
+    color: "grey",
+    fontSize: "2.2rem",
+    fontFamily: "Arial",
+    textDecoration: "none",
+  };
+
   const classes = useStyles();
 
   return (
@@ -56,7 +63,7 @@ const SideNav = ({ children }) => {
         <Toolbar />
         <div className={classes.drawerContainer}>
           <List>
-            <Link to="/dashboard" className={classes.link}>
+            <Link style={mystyle} to="/dashboard" className={classes.link}>
               {["Inbox"].map((text, index) => (
                 <ListItem button key={text}>
                   <ListItemIcon>
@@ -66,7 +73,7 @@ const SideNav = ({ children }) => {
                 </ListItem>
               ))}
             </Link>
-            <Link to="/stats" className={classes.link}>
+            <Link style={mystyle} to="/stats" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                   <DonutLargeIcon />
@@ -74,7 +81,7 @@ const SideNav = ({ children }) => {
                 <ListItemText primary="Estadísticas" />
               </ListItem>
             </Link>
-            <Link to="/access" className={classes.link}>
+            <Link style={mystyle} to="/access" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                   <ExitToAppIcon />
