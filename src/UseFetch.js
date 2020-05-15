@@ -5,6 +5,7 @@ const tasksEndpoint = "https://cubosv2.4040.wtf/api/tasks/";
 const staffsEndpoint = "https://cubosv2.4040.wtf/api/staffs/";
 const staffsEndpointSearch = "https://cubosv2.4040.wtf/api/staffs/search/";
 const projectsEndpoint = "https://cubosv2.4040.wtf/api/projects/";
+const allTasksEndpoint = "https://cubosv2.4040.wtf/api/tasks/search/?keysearch=";
 
 async function getTasks(taskId) {
     const response = await fetch(tasksEndpoint + taskId, {
@@ -15,23 +16,17 @@ async function getTasks(taskId) {
     });
     return response.json();
 }
-//REspuesta donde regresa la data de task, esta se agrega al componente donde se va a mostrar la data
-// getTasks("1").then((data) => {
-//     console.log(data);
-// });
 
 async function getStaffs(staffId) {
-    const response = await fetch(staffsEndpointSearch + staffId, {
+    const response = await fetch(staffsEndpoint + staffId, {
         method: "GET",
         headers: {
             authToken: token,
         },
     });
-
     return response.json();
-
 }
-//REspuesta donde regresa la data de staff, esta se agrega al componente donde se va a mostrar la data 
+
 
 
 async function getProjects(projectsId) {
@@ -44,8 +39,15 @@ async function getProjects(projectsId) {
     return response.json();
 }
 
-export { getStaffs, getProjects, getTasks };
-//REspuesta donde regresa la data de projects, esta se agrega al componente donde se va a mostrar la data
-// getProjects("1").then((data) => {
-//     console.log(data);
-// });
+async function allTasks() {
+    const response = await fetch(allTasksEndpoint, {
+        method: "GET",
+        headers: {
+            authToken: token,
+        },
+    });
+    return response.json();
+}
+
+export { getStaffs, getProjects, getTasks, allTasks };
+
