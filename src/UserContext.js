@@ -1,3 +1,13 @@
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 
-export const Usercontext = createContext(null)
+//const  [user, setUser]= useState('')
+/*
+const initialState = {
+  user: null
+}
+*/
+
+
+
+
+export const UserContext = createContext({});

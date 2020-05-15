@@ -1,27 +1,29 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { getStaffs } from '../UseFetch'
 import { useHistory } from 'react-router-dom'
-
+import { UserContext } from '../UserContext'
 
 
 const Access = () => {
-  const [user, setUser] = useState('');
+  const {user, setUser}  = useContext(UserContext)
+  const [email, setEmail] = useState('');
   const history = useHistory()
   const [idUser, setIdUser] = useState('');
-  const UserData = createContext(idUser);
+
 
 
   async function searchUserinData() {
-    try {
-      const response = await getStaffs(user)
+ try {
+      const response = await getStaffs(email)
       const obj = new Object();
       obj.staffid = response[0].staffid;
       obj.name = response[0].firstname;
-      setIdUser(obj)
+     setUser(JSON.stringify(obj))
       history.push('/dashboard')
     } catch (error) {
-      alert('Por Favor Revise sus datos y vuelta a intentar')
+      alert('Por favor Revise sus datos y vuelva a intentar')
     }
+
   }
 
   return (
@@ -30,12 +32,13 @@ const Access = () => {
         <h1>Task Manager</h1>
         <p>4040apps</p>
       </div>
+      <p>{user}</p>
       <div className=''>
         <input
           placeholder='email'
           type='email'
           onChange={((e) => {
-            setUser(e.target.value)
+            setEmail(e.target.value)
           })}
         />
 

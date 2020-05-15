@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState,useContext} from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-}import {userContext} from "./userContex"
+import {UserContext} from "./UserContext"
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Drawer,
@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Routes = () => {
   const classes = useStyles();
+  const  [user, setUser]= useState('Hola desde el estado ')
   return (
     <Router>
       <Navbar />
@@ -76,11 +77,13 @@ const Routes = () => {
             </Link>{" "}
           </List>{" "}
         </Drawer>{" "}
-        <Switch>
-          <Route exact path="/dashboard" component={Dashboard} />{" "}
-          <Route exact path="/stats" component={Stats} />{" "}
-          <Route exact path="/access" component={Access} />{" "}
-        </Switch>{" "}
+        <UserContext.Provider value={{user,setUser}}>
+            <Switch>
+              <Route exact path="/dashboard" component={Dashboard} />{" "}
+              <Route exact path="/stats" component={Stats} />{" "}
+              <Route exact path="/access" component={Access} />{" "}
+            </Switch>{" "}
+        </UserContext.Provider>
       </div>{" "}
     </Router>
   );
