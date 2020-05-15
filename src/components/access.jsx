@@ -1,6 +1,30 @@
 import React, { useState } from "react";
 import { getStaffs } from "../UseFetch";
 import { useHistory } from "react-router-dom";
+import { Button, TextField, Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  input: {
+    marginTop: "6%",
+    backgroundColor: "#E5E5E5",
+    width: "250px",
+  },
+  button: {
+    marginTop: "4%",
+    backgroundColor: "#FAD000",
+    borderRadius: "30px",
+    width: "150px",
+  },
+  p: {
+    color: "#C4C4C4",
+  },
+  h1: {
+    color: "#234C5B",
+    fontSize: "50px",
+    margin: "5% 0 0 0",
+  },
+}));
 
 const Access = () => {
   const [user, setUser] = useState("");
@@ -30,27 +54,33 @@ const Access = () => {
     }
   }
 
-  return (
-    <div>
-      <div>
-        <h1>Task Manager</h1>
-        <p>4040apps</p>
-      </div>
-      <div className="">
-        <input
-          placeholder="email"
-          type="email"
-          onChange={(e) => {
-            setUser(e.target.value);
-          }}
-        />
+  const classes = useStyles();
 
-        <button onClick={searchUserinData} type="submit">
-          {" "}
-          Ingresar
-        </button>
-      </div>
-    </div>
+  return (
+    <Grid container direction="column" justify="center" alignItems="center">
+      <h1 className={classes.h1}>Task Manager</h1>
+      <p className={classes.p}>4040apps</p>
+      <TextField
+        className={classes.input}
+        type="email"
+        onChange={(e) => {
+          setUser(e.target.value);
+        }}
+        id="outlined-basic"
+        label="correo"
+        variant="outlined"
+      />
+
+      <Button
+        className={classes.button}
+        variant="contained"
+        color="primary"
+        onClick={searchUserinData}
+        type="submit"
+      >
+        Ingresar
+      </Button>
+    </Grid>
   );
 };
 

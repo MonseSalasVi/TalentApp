@@ -1,71 +1,41 @@
 import React, { useState, useEffect } from "react";
-import Task from "./task";
 import Card from "@material-ui/core/Card";
+import CircularProgress from "@material-ui/core/CircularProgress";
+// import Card from "@material-ui/core/Card";
 import Divider from "@material-ui/core/Divider";
-import { getTasks, getProjects } from "../../UseFetch";
-import Box from "@material-ui/core/Box";
-
-getTasks("11").then((data) => {
-  console.log(data);
-});
+// import { getTasks, getProjects } from "../../UseFetch";
+// import Box from "@material-ui/core/Box";
+import { allTasks } from "../../UseFetch";
+import Counter from "../Counter/Counter.jsx";
 
 const Project = () => {
-  const dummyArray = [
-    { id: "1" },
-    { id: "4" },
-    { id: "6" },
-    { id: "7" },
-    { id: "9" },
-    { id: "10" },
-    { id: "11" },
-  ];
-  const [tasks, setTasks] = useState(dummyArray);
-  const [project, setProject] = useState([]);
+  const [tasks, setTasks] = useState(null);
 
   useEffect(() => {
-    getProjects("1").then((data) => {
-      setProject(data);
+    allTasks().then((data) => {
+      console.log(data);
+      setTasks(data);
     });
   }, []);
 
-  return (
-    <>
-      <div>
-        <h1>{project.name}</h1>
-        <a href="https://trello.com/claudiacustodiog/boards" target="blank">
-          Trello
-        </a>
-        <Divider variant="middle" />
-      </div>
+  const onStop = (timeBlock) => {
+    console.log(timeBlock);
+  };
 
-      <div style={{ width: "100%" }}>
-        <Box display="flex" p={1} bgcolor="background.paper">
-          <Box p={1} width="100%" bgcolor="grey.300">
-            <h5>Tarea</h5>
-          </Box>
-          <Box p={1} flexShrink={3} bgcolor="grey.300">
-            <h5>Estatus</h5>
-          </Box>
-          <Box p={1} flexShrink={2} bgcolor="grey.300">
-            <h5>Deadline</h5>
-          </Box>
-          <Box p={1} flexShrink={1} bgcolor="grey.300">
-            <h5>Tiempo</h5>
-          </Box>
-          <Box p={1} flexShrink={0} bgcolor="grey.300">
-            <h5>Cronómetro</h5>
-          </Box>
-        </Box>
-      </div>
-
-      <div>
+  return !tasks ? (
+    <CircularProgress />
+  ) : (
+    <div>
+      {tasks.map((el, index) => (
         <Card>
-          {tasks.map((t, i) => (
-            <Task key={i} taskId={t.id} />
-          ))}
+          <h4>Task Name: {el.name}</h4>
+          <h5>Task ID: {el.id}</h5>
+          <h5>Project: {el.rel_id}</h5>
+          {/* tiempo de inicio, tiempo de tiempo de finalizar , tiempo transcurrido*/}
+          <Counter onStop={onStop} />
         </Card>
-      </div>
-    </>
+      ))}
+    </div>
   );
 };
 
