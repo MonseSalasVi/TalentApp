@@ -8,6 +8,7 @@ class Counter extends Component {
     super(props);
     this.state = {
       actualTime: 0,
+      startTime: 0,
       btnPlayPause: "Play",
     };
 
@@ -21,6 +22,7 @@ class Counter extends Component {
     if (this.counter) {
       this.pauseTimer();
       this.setState({ btnPlayPause: "Play" });
+      this.setState({ startTime: Date.now() });
     } else {
       this.counter = setInterval(() => {
         this.setState({ actualTime: this.state.actualTime + 0.1 });
@@ -35,6 +37,11 @@ class Counter extends Component {
   }
 
   clearTimer() {
+    this.props.onStop({
+      end_time: Date.now(),
+      start_time: this.state.startTime,
+      time_spent: this.state.actualTime,
+    });
     this.setState({ actualTime: 0 });
     clearInterval(this.counter);
     this.counter = null;
