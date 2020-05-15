@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+}import {userContext} from "./userContex"
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Drawer,

@@ -1,18 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
 import { getStaffs } from '../UseFetch'
 import { useHistory } from 'react-router-dom'
 
+
+
 const Access = () => {
   const [user, setUser] = useState('');
-  const [idUser, setIdUser] = useState('');
   const history = useHistory()
-
+  const [idUser, setIdUser] = useState('');
+  const UserData = createContext(idUser);
 
 
   async function searchUserinData() {
     try {
       const response = await getStaffs(user)
-      setIdUser(response[0].staffid)
+      const obj = new Object();
+      obj.staffid = response[0].staffid;
+      obj.name = response[0].firstname;
+      setIdUser(obj)
       history.push('/dashboard')
     } catch (error) {
       alert('Por Favor Revise sus datos y vuelta a intentar')
@@ -40,6 +45,8 @@ const Access = () => {
 
     </div>
   )
+
 };
+
 
 export default Access;

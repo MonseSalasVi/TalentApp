@@ -4,9 +4,9 @@ import Card from "@material-ui/core/Card";
 import Divider from "@material-ui/core/Divider";
 import { getTasks, getProjects } from "../../UseFetch";
 import Box from "@material-ui/core/Box";
-        
+
 getTasks("7").then((data) => {
-  console.log(data);
+
 });
 
 const Project = () => {
@@ -52,8 +52,8 @@ const Project = () => {
 
       <div>
         <Card>
-          {tasks.map((t , i) => (
-            <Task key={i} taskId={t.id />
+          {tasks.map((t, i) => (
+            <Task key={i} taskId={t.id} />
           ))}
         </Card>
       </div>
