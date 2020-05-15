@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navbar";
+//import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Access from "./components/access";
@@ -27,8 +27,8 @@ const Routes = () => {
           <Route exact path="/dashboard" component={Dashboard} />{" "}
           <Route exact path="/stats" component={Stats} />{" "}
           <Route exact path="/access" component={Access} />{" "}
-        </Switch>
-      </Layout>
+        </Switch>{" "}
+      </Layout>{" "}
     </Router>
   );
 };
