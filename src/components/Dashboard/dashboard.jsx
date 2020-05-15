@@ -1,13 +1,14 @@
 import React, { useState, useContext, useEffect } from 'react';
 import Project from "./project";
-import UserData from "../access";
+// import { findByLabelText } from "@testing-library/react";
+// import UserData from "../access";
 import { UserContext } from '../../UserContext';
 import { getTasks } from '../../UseFetch';
-import UserTask from '../UserTask/UserTask';
+// import UserTask from '../UserTask/UserTask';
 
 const Dashboard = () => {
     const {user}  = useContext(UserContext)
-    const {task, setTask} = useState('');
+    const [tasks, setTasks] = useState([]);
 
        useEffect(()=>{
             allTask()
@@ -17,24 +18,27 @@ const Dashboard = () => {
     const allTask = async () => {
         try{
             const resp = await getTasks(user.staffid);
-            console.log(resp.checklist_items)
-            const array = new Array();
-             array.push(resp.checklist_items.description)
-                setTask(array)
-                   console.log(task)
-
-
+            const newArray = await resp.checklist_items.map(item => item)
+            // console.log(newArray);    
+            setTasks(newArray)
+         
         } catch(err) {
-            alert("error al obtener tasks");
+          console.log(err);
+           
+          // alert("error al obtener tasks");
         }
     }
 
 
   return (
     <div className="container">
-      <h1> Hola, {user.name} estas son las tareas para el día de hoy</h1>
-      <UserTask taskList={1}/>
-      <Project />
+      <h1 style={{
+          color: "grey",
+          fontFamily: "Roboto, sains",
+          display: "flex",
+          justifyContent: "center",
+        }} > Hola, {user.name} estas son las tareas para el día de hoy</h1>
+      <Project tasks={tasks} />
     </div>
   );
 };
