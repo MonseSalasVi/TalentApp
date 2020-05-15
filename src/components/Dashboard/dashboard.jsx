@@ -9,8 +9,8 @@ const Dashboard = () => {
 
   return (
     <div className="container">
-      <p>{user}</p>
-      <h1> Hola, {JSON.stringify(user)} estas son las tareas para el día de hoy</h1>
+
+      <h1> Hola, {user.name} estas son las tareas para el día de hoy</h1>
       <Project />
     </div>
   );

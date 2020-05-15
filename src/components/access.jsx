@@ -18,7 +18,7 @@ const Access = () => {
       const obj = new Object();
       obj.staffid = response[0].staffid;
       obj.name = response[0].firstname;
-     setUser(JSON.stringify(obj))
+     setUser(obj)
       history.push('/dashboard')
     } catch (error) {
       alert('Por favor Revise sus datos y vuelva a intentar')
@@ -32,7 +32,7 @@ const Access = () => {
         <h1>Task Manager</h1>
         <p>4040apps</p>
       </div>
-      <p>{user}</p>
+
       <div className=''>
         <input
           placeholder='email'
