@@ -7,9 +7,14 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles((theme) => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
+    backgroundColor: "#234C5B",
   },
   offset: theme.mixins.toolbar,
   title: {
+    flexGrow: 1,
+  },
+  subtitle: {
+    color: "#C4C4C4",
     flexGrow: 1,
   },
 }));
@@ -29,6 +34,9 @@ function NavBar() {
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
           Talent App
+        </Typography>
+        <Typography variant="h6" className={classes.subtitle}>
+          4040apps
         </Typography>
         <Typography> {today} </Typography>
       </Toolbar>

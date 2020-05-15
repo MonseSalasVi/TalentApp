@@ -34,7 +34,6 @@ const Task = ({ taskId }) => {
   return !task ? (
     <CircularProgress />
   ) : (
-    //map para las tasks
     <Card>
       <div style={{ width: "100%" }}>
         <Box display="flex" p={1} bgcolor="background.paper">
