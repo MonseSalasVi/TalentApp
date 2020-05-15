@@ -39,6 +39,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
+  link: {
+    textDecoration: "none",
+    color: "#4D4D4D",
+  },
 }));
 
 const SideNav = ({ children }) => {
@@ -57,16 +61,13 @@ const SideNav = ({ children }) => {
         <div className={classes.drawerContainer}>
           <List>
             <Link to="/dashboard" className={classes.link}>
-              {" "}
-              {["Inbox"].map((text, index) => (
-                <ListItem button key={text}>
-                  <ListItemIcon>
-                    <CheckBoxIcon />
-                  </ListItemIcon>{" "}
-                  <ListItemText primary="Mis tareas" />
-                </ListItem>
-              ))}{" "}
-            </Link>{" "}
+              <ListItem button>
+                <ListItemIcon>
+                  <CheckBoxIcon />
+                </ListItemIcon>
+                <ListItemText className={classes.text} primary="Mis tareas" />
+              </ListItem>
+            </Link>
             <Link to="/stats" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
