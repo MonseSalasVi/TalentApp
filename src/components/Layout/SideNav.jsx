@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
@@ -68,7 +67,7 @@ const SideNav = ({ children }) => {
         <div className={classes.drawerContainer}>
           <List>
             <Link to="/dashboard" style={mystyle} className={classes.link}>
-              <ListItem button key={text}>
+              <ListItem button>
                 <ListItemIcon>
                   <CheckBoxIcon />
                 </ListItemIcon>

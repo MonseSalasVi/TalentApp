@@ -1,5 +1,4 @@
 .Counter {
-  background-color: #b3b3ff;
   display: flex;
   flex-direction: column;
   height: 90px;
@@ -9,7 +8,6 @@
 
 .CounterName {
   text-align: center;
-  color: white;
 }
 
 .CounterTime {
@@ -20,7 +18,6 @@
 
 .btnCount {
   background-color: transparent;
-  color: orange;
   border-radius: 50%;
   height: auto;
   width: auto;
