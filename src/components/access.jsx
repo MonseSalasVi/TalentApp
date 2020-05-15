@@ -1,9 +1,9 @@
-import React, { useState, useContext  } from "react";
+import React, { useState, useContext } from "react";
 import { getStaffs } from "../UseFetch";
 import { useHistory } from "react-router-dom";
 import { Button, TextField, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { UserContext } from '../UserContext'
+import { UserContext } from "../UserContext";
 
 const useStyles = makeStyles((theme) => ({
   input: {
@@ -28,33 +28,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Access = () => {
-    const {user, setUser}  = useContext(UserContext)
-  const [email, setEmail] = useState('');
+  const { user, setUser } = useContext(UserContext);
+  const [email, setEmail] = useState("");
   const history = useHistory();
   const [idUser, setIdUser] = useState("");
 
   async function searchUserinData() {
     try {
-      const response = await getStaffs(user);
-      setIdUser(response[0].staffid);
-      history.push("/dashboard");
-    } catch (error) {
-      alert("Por Favor Revise sus datos y vuelta a intentar");
-    }
-  }
-
-  async function searchUserinData() {
- try {
-      const response = await getStaffs(email)
+      const response = await getStaffs(email);
       const obj = new Object();
       obj.staffid = response[0].staffid;
       obj.name = response[0].firstname;
-     setUser(obj)
-      history.push('/dashboard')
+      setUser(obj);
+      history.push("/dashboard");
     } catch (error) {
-      alert('Por favor Revise sus datos y vuelva a intentar')
+      alert("Por favor Revise sus datos y vuelva a intentar");
     }
-
   }
 
   const classes = useStyles();
@@ -67,10 +56,10 @@ const Access = () => {
         className={classes.input}
         type="email"
         onChange={(e) => {
-          setUser(e.target.value);
+          setEmail(e.target.value);
         }}
         id="outlined-basic"
-        label="correo"
+        label="email"
         variant="outlined"
       />
 
@@ -86,6 +75,5 @@ const Access = () => {
     </Grid>
   );
 };
-
 
 export default Access;
