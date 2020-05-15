@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import "./Counter.css";
-import { render } from "@testing-library/react";
+//import { render } from "@testing-library/react";
 
 class Counter extends Component {
   constructor(props) {
@@ -51,9 +51,9 @@ class Counter extends Component {
   render() {
     return (
       <div className="Counter">
-        <div className="CounterName">
+        {/*  <div className="CounterName">
           <h1> Tarea </h1>
-        </div>
+        </div> */}
         <div className="CounterTime">
           <input
             className="btnCount"

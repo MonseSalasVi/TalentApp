@@ -7,8 +7,8 @@ import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+//import InboxIcon from "@material-ui/icons/MoveToInbox";
+//import MailIcon from "@material-ui/icons/Mail";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -46,6 +46,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SideNav = ({ children }) => {
+  const mystyle = {
+    color: "grey",
+    fontSize: "2.2rem",
+    fontFamily: "Arial",
+    textDecoration: "none",
+  };
+
   const classes = useStyles();
 
   return (
@@ -60,37 +67,36 @@ const SideNav = ({ children }) => {
         <Toolbar />
         <div className={classes.drawerContainer}>
           <List>
-            <Link to="/dashboard" className={classes.link}>
-              <ListItem button>
+            <Link to="/dashboard" style={mystyle} className={classes.link}>
+              <ListItem button key={text}>
                 <ListItemIcon>
                   <CheckBoxIcon />
                 </ListItemIcon>
                 <ListItemText className={classes.text} primary="Mis tareas" />
               </ListItem>
             </Link>
-            <Link to="/stats" className={classes.link}>
+            <Link style={mystyle} to="/stats" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                   <DonutLargeIcon />
-                </ListItemIcon>
+                </ListItemIcon>{" "}
                 <ListItemText primary="Estadísticas" />
               </ListItem>
             </Link>
-            <Link to="/access" className={classes.link}>
+            <Link style={mystyle} to="/access" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                   <ExitToAppIcon />
-                </ListItemIcon>
+                </ListItemIcon>{" "}
                 <ListItemText primary="Salir" />
-              </ListItem>
-            </Link>
-          </List>
-        </div>
-      </Drawer>
+              </ListItem>{" "}
+            </Link>{" "}
+          </List>{" "}
+        </div>{" "}
+      </Drawer>{" "}
       <main className={classes.content}>
-        <Toolbar />
-        {children}
-      </main>
+        <Toolbar /> {children}{" "}
+      </main>{" "}
     </Fragment>
   );
 };
