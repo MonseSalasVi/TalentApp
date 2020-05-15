@@ -5,7 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Access from "./components/access";
 import Dashboard from "./components/Dashboard/dashboard";
 import Stats from "./components/stats";
-
 import Layout from "./components/Layout/Layout";
 
 const useStyles = makeStyles((theme) => ({
