@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import "./Counter.css";
-import { render } from "@testing-library/react";
+//import { render } from "@testing-library/react";
 
 class Counter extends Component {
   constructor(props) {

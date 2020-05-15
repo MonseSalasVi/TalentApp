@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Card from "@material-ui/core/Card";
 import CircularProgress from "@material-ui/core/CircularProgress";
 // import Task from "./task";
-// import Card from "@material-ui/core/Card";
 import Divider from "@material-ui/core/Divider";
 
 // import { getTasks, getProjects } from "../../UseFetch";
@@ -16,7 +15,6 @@ const Project = () => {
 
   useEffect(() => {
     allTasks().then((data) => {
-      console.log(data);
       setTasks(data);
     });
   }, []);

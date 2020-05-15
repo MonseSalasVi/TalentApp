@@ -1,3 +1,4 @@
+
 import React, {useState,useContext} from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
@@ -24,7 +25,6 @@ const Routes = () => {
 
   return (
     <Router>
-
       <Navbar />
       <div
         style={{
@@ -77,7 +77,6 @@ const Routes = () => {
             </Switch>{" "}
         </UserContextProvider>
       </div>{" "}
-
     </Router>
   );
 };
