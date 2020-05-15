@@ -19,11 +19,13 @@ const useStyles = makeStyles((theme) => ({
   },
   p: {
     color: "#C4C4C4",
+    fontFamily: "Roboto",
   },
   h1: {
     color: "#234C5B",
     fontSize: "50px",
     margin: "5% 0 0 0",
+    fontFamily: "Roboto",
   },
 }));
 
@@ -31,12 +33,11 @@ const Access = () => {
   const { user, setUser } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const history = useHistory();
-  const [idUser, setIdUser] = useState("");
-
+  console.log(user);
   async function searchUserinData() {
     try {
       const response = await getStaffs(email);
-      const obj = new Object();
+      const obj = {};
       obj.staffid = response[0].staffid;
       obj.name = response[0].firstname;
       setUser(obj);
@@ -47,7 +48,6 @@ const Access = () => {
   }
 
   const classes = useStyles();
-
   return (
     <Grid container direction="column" justify="center" alignItems="center">
       <h1 className={classes.h1}>Task Manager</h1>

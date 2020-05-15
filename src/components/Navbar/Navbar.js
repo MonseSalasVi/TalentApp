@@ -57,10 +57,10 @@ const Navbar = () => {
       <AppBar position="fixed" className={classes.appBar} color="primary">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Talent App
-          </Typography>
-        </Toolbar>
-      </AppBar>
+            Talent App{" "}
+          </Typography>{" "}
+        </Toolbar>{" "}
+      </AppBar>{" "}
       <Drawer
         className={classes.drawer}
         variant="persistent"
@@ -70,37 +70,38 @@ const Navbar = () => {
           paper: classes.drawerPaper,
         }}
       >
-        <div className={classes.drawerContainer}></div>
+        <div className={classes.drawerContainer}> </div>{" "}
         <List>
           <Link to="/dashboard" className={classes.link}>
+            {" "}
             {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>
                   <CheckBoxIcon />
-                </ListItemIcon>
+                </ListItemIcon>{" "}
                 <ListItemText primary="Mis tareas" />
               </ListItem>
-            ))}
-          </Link>
+            ))}{" "}
+          </Link>{" "}
           <Link to="/stats" className={classes.link}>
             <ListItem button>
               <ListItemIcon>
                 <DonutLargeIcon />
-              </ListItemIcon>
+              </ListItemIcon>{" "}
               <ListItemText primary="Estadísticas" />
-            </ListItem>
-          </Link>
-          <Link to="/access" className={classes.link}>
+            </ListItem>{" "}
+          </Link>{" "}
+          <Link to="/" className={classes.link}>
             <ListItem button>
               <ListItemIcon>
                 <ExitToAppIcon />
-              </ListItemIcon>
+              </ListItemIcon>{" "}
               <ListItemText primary="Salir" />
-            </ListItem>
-          </Link>
-        </List>
-      </Drawer>
-      <div className={classes.offset}> </div>
+            </ListItem>{" "}
+          </Link>{" "}
+        </List>{" "}
+      </Drawer>{" "}
+      <div className={classes.offset}> </div>{" "}
     </div>
   );
 };
