@@ -1,22 +1,14 @@
+
 import React, {useState,useContext} from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import {UserContextProvider} from "./UserContext"
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Drawer,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from "@material-ui/core";
-import CheckBoxIcon from "@material-ui/icons/CheckBox";
-import DonutLargeIcon from "@material-ui/icons/DonutLarge";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import AppBar from "./components/AppBar/appBar";
 import Access from "./components/access";
 import Dashboard from "./components/Dashboard/dashboard";
 import Stats from "./components/stats";
+
+import Layout from "./components/Layout/Layout";
 
 const useStyles = makeStyles((theme) => ({
   drawerPaper: {
