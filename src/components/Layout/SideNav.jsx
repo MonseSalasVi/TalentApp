@@ -7,8 +7,8 @@ import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+//import InboxIcon from "@material-ui/icons/MoveToInbox";
+//import MailIcon from "@material-ui/icons/Mail";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -72,25 +72,24 @@ const SideNav = ({ children }) => {
               <ListItem button>
                 <ListItemIcon>
                   <DonutLargeIcon />
-                </ListItemIcon>
+                </ListItemIcon>{" "}
                 <ListItemText primary="Estadísticas" />
-              </ListItem>
-            </Link>
+              </ListItem>{" "}
+            </Link>{" "}
             <Link to="/access" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                   <ExitToAppIcon />
-                </ListItemIcon>
+                </ListItemIcon>{" "}
                 <ListItemText primary="Salir" />
-              </ListItem>
-            </Link>
-          </List>
-        </div>
-      </Drawer>
+              </ListItem>{" "}
+            </Link>{" "}
+          </List>{" "}
+        </div>{" "}
+      </Drawer>{" "}
       <main className={classes.content}>
-        <Toolbar />
-        {children}
-      </main>
+        <Toolbar /> {children}{" "}
+      </main>{" "}
     </Fragment>
   );
 };

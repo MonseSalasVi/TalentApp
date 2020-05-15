@@ -18,7 +18,7 @@ async function getTasks(taskId) {
 }
 
 async function getStaffs(staffId) {
-    const response = await fetch(staffsEndpoint + staffId, {
+    const response = await fetch(staffsEndpointSearch + staffId, {
         method: "GET",
         headers: {
             authToken: token,
@@ -49,5 +49,9 @@ async function allTasks() {
     return response.json();
 }
 
-export { getStaffs, getProjects, getTasks, allTasks };
-
+export {
+    getStaffs,
+    getProjects,
+    getTasks,
+    allTasks
+};
