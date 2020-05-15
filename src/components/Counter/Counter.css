@@ -1,35 +1,31 @@
 .Counter {
-    background-color: #b3b3ff;
-    display: flex;
-    flex-direction: column;
-    height: 135px;
-    width: 320px;
-    border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+  width: 155px;
+  border-radius: 15px;
 }
 
 .CounterName {
-    text-align: center;
-    color: white;
+  text-align: center;
 }
 
 .CounterTime {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .btnCount {
-    background-color: transparent;
-    color: #ffdb4d;
-    border-radius: 50%;
-    height: auto;
-    width: auto;
-    font-size: 20px;
-    border: transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  border: transparent;
 }
 
-.btnCount:Hover {
-    background-color: white;
-    color: #c2c2ff;
+.btnCount:hover {
+  background-color: white;
+  color: #c2c2ff;
 }
