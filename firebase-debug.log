@@ -1,0 +1,122 @@
+[debug] [2020-05-15T15:50:16.723Z] ----------------------------------------------------------------------
+[debug] [2020-05-15T15:50:16.726Z] Command:       /usr/local/bin/firebase /Users/monsesalas/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2020-05-15T15:50:16.727Z] CLI Version:   8.2.0
+[debug] [2020-05-15T15:50:16.727Z] Platform:      darwin
+[debug] [2020-05-15T15:50:16.727Z] Node Version:  v12.16.1
+[debug] [2020-05-15T15:50:16.728Z] Time:          Fri May 15 2020 10:50:16 GMT-0500 (GMT-05:00)
+[debug] [2020-05-15T15:50:16.729Z] ----------------------------------------------------------------------
+[debug] [2020-05-15T15:50:16.729Z] 
+[debug] [2020-05-15T15:50:16.739Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-15T15:50:16.740Z] > authorizing via signed-in user
+[debug] [2020-05-15T15:50:16.740Z] [iam] checking project apps-3addc for permissions ["firebase.projects.get"]
+[debug] [2020-05-15T15:50:16.744Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-05-15T15:50:16.744Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-05-15T15:50:17.030Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 15:50:16 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-15T15:50:17.040Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/apps-3addc:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-15T15:50:17.340Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 15:50:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=93","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-15T15:50:17.341Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/apps-3addc  
+ 
+[debug] [2020-05-15T15:50:17.674Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 15:50:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from '/Users/monsesalas/Desktop/reactdemo'...
+[info] 
+[debug] [2020-05-15T15:50:17.678Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/apps-3addc/webApps/-/config  
+ 
+[debug] [2020-05-15T15:50:18.044Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 15:50:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5025
+[debug] [2020-05-15T15:52:14.894Z] ----------------------------------------------------------------------
+[debug] [2020-05-15T15:52:14.898Z] Command:       /usr/local/bin/firebase /Users/monsesalas/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2020-05-15T15:52:14.898Z] CLI Version:   8.2.0
+[debug] [2020-05-15T15:52:14.898Z] Platform:      darwin
+[debug] [2020-05-15T15:52:14.898Z] Node Version:  v12.16.1
+[debug] [2020-05-15T15:52:14.900Z] Time:          Fri May 15 2020 10:52:14 GMT-0500 (GMT-05:00)
+[debug] [2020-05-15T15:52:14.900Z] ----------------------------------------------------------------------
+[debug] [2020-05-15T15:52:14.900Z] 
+[debug] [2020-05-15T15:52:14.911Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-15T15:52:14.912Z] > authorizing via signed-in user
+[debug] [2020-05-15T15:52:14.912Z] [iam] checking project apps-3addc for permissions ["firebase.projects.get"]
+[debug] [2020-05-15T15:52:14.916Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/apps-3addc:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-15T15:52:15.223Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 15:52:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=90","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-15T15:52:15.226Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/apps-3addc  
+ 
+[debug] [2020-05-15T15:52:15.481Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 15:52:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from '/Users/monsesalas/Desktop/reactdemo'...
+[info] 
+[debug] [2020-05-15T15:52:15.486Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/apps-3addc/webApps/-/config  
+ 
+[debug] [2020-05-15T15:52:15.913Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 15:52:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5030
+[debug] [2020-05-15T15:53:10.049Z] ----------------------------------------------------------------------
+[debug] [2020-05-15T15:53:10.051Z] Command:       /usr/local/bin/firebase /Users/monsesalas/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2020-05-15T15:53:10.052Z] CLI Version:   8.2.0
+[debug] [2020-05-15T15:53:10.052Z] Platform:      darwin
+[debug] [2020-05-15T15:53:10.052Z] Node Version:  v12.16.1
+[debug] [2020-05-15T15:53:10.054Z] Time:          Fri May 15 2020 10:53:10 GMT-0500 (GMT-05:00)
+[debug] [2020-05-15T15:53:10.054Z] ----------------------------------------------------------------------
+[debug] [2020-05-15T15:53:10.054Z] 
+[debug] [2020-05-15T15:53:10.064Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-15T15:53:10.065Z] > authorizing via signed-in user
+[debug] [2020-05-15T15:53:10.065Z] [iam] checking project apps-3addc for permissions ["firebase.projects.get"]
+[debug] [2020-05-15T15:53:10.069Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/apps-3addc:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-15T15:53:10.426Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 15:53:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=126","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-15T15:53:10.428Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/apps-3addc  
+ 
+[debug] [2020-05-15T15:53:10.719Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 15:53:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from '/Users/monsesalas/Desktop/reactdemo'...
+[info] 
+[debug] [2020-05-15T15:53:10.723Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/apps-3addc/webApps/-/config  
+ 
+[debug] [2020-05-15T15:53:11.042Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 15:53:11 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5035
+[debug] [2020-05-15T16:08:19.489Z] ----------------------------------------------------------------------
+[debug] [2020-05-15T16:08:19.496Z] Command:       /usr/local/bin/firebase /Users/monsesalas/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2020-05-15T16:08:19.498Z] CLI Version:   8.2.0
+[debug] [2020-05-15T16:08:19.498Z] Platform:      darwin
+[debug] [2020-05-15T16:08:19.498Z] Node Version:  v12.16.1
+[debug] [2020-05-15T16:08:19.500Z] Time:          Fri May 15 2020 11:08:19 GMT-0500 (GMT-05:00)
+[debug] [2020-05-15T16:08:19.500Z] ----------------------------------------------------------------------
+[debug] [2020-05-15T16:08:19.500Z] 
+[debug] [2020-05-15T16:08:19.513Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-15T16:08:19.514Z] > authorizing via signed-in user
+[debug] [2020-05-15T16:08:19.514Z] [iam] checking project apps-3addc for permissions ["firebase.projects.get"]
+[debug] [2020-05-15T16:08:19.518Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/apps-3addc:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-15T16:08:19.890Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 16:08:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=86","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-15T16:08:19.893Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/apps-3addc  
+ 
+[debug] [2020-05-15T16:08:20.262Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 16:08:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from '/Users/monsesalas/Desktop/reactdemo'...
+[info] 
+[debug] [2020-05-15T16:08:20.266Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/apps-3addc/webApps/-/config  
+ 
+[debug] [2020-05-15T16:08:20.680Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 15 May 2020 16:08:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000

@@ -8,9 +8,8 @@ import Box from "@material-ui/core/Box";
 //import Task from "./task";
 import { allTasks } from "../../UseFetch";
 import Counter from "../Counter/Counter.jsx";
-import Tasks from "../Tasks";
+import Tasks from "./Tasks";
 import { CardHeader, CardContent } from "@material-ui/core";
-
 
 const Project = () => {
   const mystyle = {
@@ -31,14 +30,6 @@ const Project = () => {
   ) : (
     <>
       <div>
-        {/*  <h1>{project.name}</h1> */}
-        <a
-          style={mystyle}
-          href="https://trello.com/claudiacustodiog/boards"
-          target="blank"
-        >
-          Trello
-        </a>
         <Divider variant="middle" />
       </div>
       <div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-//import ReactDOM from "react-dom";
 import "./Counter.css";
-//import { render } from "@testing-library/react";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import StopIcon from "@material-ui/icons/Stop";
 
 class Counter extends Component {
   constructor(props) {
@@ -51,24 +51,21 @@ class Counter extends Component {
   render() {
     return (
       <div className="Counter">
-        {/*  <div className="CounterName">
-          <h1> Tarea </h1>
-        </div> */}
         <div className="CounterTime">
-          <input
-            className="btnCount"
+          <PlayArrowIcon
+            color="action"
             type="button"
             value={this.state.btnPlayPause}
             onClick={this.initTimer}
           />
-          <input
-            className="btnCount"
+          <StopIcon
+            color="action"
             type="button"
             value="Clear"
             onClick={this.clearTimer}
           />
-          <h2> {this.state.actualTime.toFixed(2)}</h2>
         </div>
+        <h2 className="timer"> {this.state.actualTime.toFixed(2)}</h2>
       </div>
     );
   }

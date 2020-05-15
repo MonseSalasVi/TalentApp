@@ -8,7 +8,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import Counter from "./Counter/Counter";
+import Counter from "../Counter/Counter";
 
 const useStyles = makeStyles({
   table: {
@@ -53,6 +53,7 @@ const Tasks = ({ tasks }) => {
             <StyledTableCell>Tarea</StyledTableCell>
             <StyledTableCell align="right">ID de Tarea</StyledTableCell>
             <StyledTableCell align="right">ID de Proyecto</StyledTableCell>
+            <StyledTableCell align="right">Deadline</StyledTableCell>
             <StyledTableCell align="right">Temporizador</StyledTableCell>
           </TableRow>
         </TableHead>
@@ -64,6 +65,7 @@ const Tasks = ({ tasks }) => {
               </TableCell>
               <TableCell align="right">{el.id}</TableCell>
               <TableCell align="right">{el.rel_id}</TableCell>
+              <TableCell align="right">{el.duedate}</TableCell>
               <TableCell align="right">
                 <Counter onStop={onStop} />
               </TableCell>

@@ -24,13 +24,11 @@ const Routes = () => {
   return (
     <Router>
       <UserContextProvider>
-        <Layout>
-          <Switch>
-            <Route exact path="/dashboard" component={Dashboard} />{" "}
-            <Route exact path="/stats" component={Stats} />{" "}
-            <Route exact path="/access" component={Access} />{" "}
-          </Switch>
-        </Layout>
+        <Switch>
+          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/stats" component={Stats} />
+          <Route exact path="/" component={Access} />
+        </Switch>
       </UserContextProvider>
     </Router>
   );

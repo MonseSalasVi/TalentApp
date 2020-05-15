@@ -1,22 +1,29 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext } from "react";
 import Project from "./project";
 import { findByLabelText } from "@testing-library/react";
 import UserData from "../access";
-import { UserContext } from '../../UserContext'
+import { UserContext } from "../../UserContext";
+import Layout from "../Layout/Layout.jsx";
 
 const Dashboard = () => {
-    const {user}  = useContext(UserContext)
+  const { user } = useContext(UserContext);
 
   return (
-    <div className="container">
-      <h1 style={{
-          color: "grey",
-          fontFamily: "Roboto, sains",
-          display: "flex",
-          justifyContent: "center",
-        }} > Hola, {user.name} estas son las tareas para el día de hoy</h1>
-      <Project />
-    </div>
+    <Layout>
+      <div className="container">
+        <h1
+          style={{
+            color: "grey",
+            fontFamily: "Roboto, sains",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          Hola {user.name}, estas son las tareas para el día de hoy
+        </h1>
+        <Project />
+      </div>
+    </Layout>
   );
 };
 
