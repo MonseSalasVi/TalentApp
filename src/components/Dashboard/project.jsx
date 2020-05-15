@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Task from "./task";
+import { getTasks, getProjects } from "../../UseFetch";
+
+// Css Materia-ui
 import Card from "@material-ui/core/Card";
 import Divider from "@material-ui/core/Divider";
-import { getTasks, getProjects } from "../../UseFetch";
 import Box from "@material-ui/core/Box";
 
 getTasks("7").then((data) => {
