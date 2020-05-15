@@ -33,12 +33,11 @@ const Access = () => {
   const { user, setUser } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const history = useHistory();
-  const [idUser, setIdUser] = useState("");
-
+  console.log(user);
   async function searchUserinData() {
     try {
       const response = await getStaffs(email);
-      const obj = new Object();
+      const obj = {};
       obj.staffid = response[0].staffid;
       obj.name = response[0].firstname;
       setUser(obj);

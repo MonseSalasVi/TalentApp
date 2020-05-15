@@ -1,7 +1,5 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import Project from "./project";
-import { findByLabelText } from "@testing-library/react";
-import UserData from "../access";
 import { UserContext } from "../../UserContext";
 import Layout from "../Layout/Layout.jsx";
 
@@ -19,10 +17,10 @@ const Dashboard = () => {
             justifyContent: "center",
           }}
         >
-          Hola {user.name}, estas son las tareas para el día de hoy
-        </h1>
+          Hola {user.name}, estas son las tareas para el día de hoy{" "}
+        </h1>{" "}
         <Project />
-      </div>
+      </div>{" "}
     </Layout>
   );
 };
