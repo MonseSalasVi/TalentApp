@@ -15,7 +15,6 @@ const Task = ({ taskId }) => {
   return !task ? (
     <CircularProgress />
   ) : (
-    //map para las tasks
     <Card>
       <h4>{task.name}</h4>
       <p>00:00:00</p>

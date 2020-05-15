@@ -1,21 +1,32 @@
-import React, { useState } from 'react';
-import { getStaffs } from '../UseFetch'
-import { useHistory } from 'react-router-dom'
+import React, { useState } from "react";
+import { getStaffs } from "../UseFetch";
+import { useHistory } from "react-router-dom";
 
 const Access = () => {
-  const [user, setUser] = useState('');
-  const [idUser, setIdUser] = useState('');
-  const history = useHistory()
-
-
+  const [user, setUser] = useState("");
+  const [idUser, setIdUser] = useState("");
+  const history = useHistory();
 
   async function searchUserinData() {
     try {
-      const response = await getStaffs(user)
-      setIdUser(response[0].staffid)
-      history.push('/dashboard')
+      const response = await getStaffs(user);
+      setIdUser(response[0].staffid);
+      history.push("/dashboard");
     } catch (error) {
-      alert('Por Favor Revise sus datos y vuelta a intentar')
+      alert("Por Favor Revise sus datos y vuelta a intentar");
+    }
+  }
+
+  async function searchUserinData() {
+    try {
+      const response = await getStaffs(user);
+      const obj = new Object();
+      obj.staffid = response[0].staffid;
+      obj.name = response[0].firstname;
+      setIdUser(obj);
+      history.push("/dashboard");
+    } catch (error) {
+      alert("Por Favor Revise sus datos y vuelta a intentar");
     }
   }
 
@@ -25,21 +36,22 @@ const Access = () => {
         <h1>Task Manager</h1>
         <p>4040apps</p>
       </div>
-      <div className=''>
+      <div className="">
         <input
-          placeholder='email'
-          type='email'
-          onChange={((e) => {
-            setUser(e.target.value)
-          })}
+          placeholder="email"
+          type="email"
+          onChange={(e) => {
+            setUser(e.target.value);
+          }}
         />
 
-        <button onClick={searchUserinData} type='submit'> Ingresar</button>
-
+        <button onClick={searchUserinData} type="submit">
+          {" "}
+          Ingresar
+        </button>
       </div>
-
     </div>
-  )
+  );
 };
 
 export default Access;
