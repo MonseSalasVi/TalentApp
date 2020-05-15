@@ -1,39 +1,39 @@
 # Talent App
 
+Administrador de tareas utilizable en escritorio para el equipo de 4040apps.
+
 #### Index
 
 - [Autoras](#Autoras)
 - [Introduction](#Introduction)
 - [Historias de usuario y subtareas](#Historias-de-usuario-y-subtareas)
-    - [Sprint 1](#-sprint-1-)
-    - [Srpint 2](#-sprint-2-)
-    - [Sprint 3](#-sprint-3-)
-    - [Sprint 4](#-sprint-4-)
-    - [Sprint 5](#-sprint-5-)
+  - [Sprint 1](#-sprint-1-)
+  - [Srpint 2](#-sprint-2-)
+  - [Sprint 3](#-sprint-3-)
+  - [Sprint 4](#-sprint-4-)
+  - [Sprint 5](#-sprint-5-)
 - [Herramientas](#Herramientas)
-    - [Herramientas de comunicacion](#Herramientas-de-comunicacion)
+  - [Herramientas de comunicacion](#Herramientas-de-comunicacion)
 - [Prototipo de alta fidelidad](#Prototipo-de-alta-fidelidad)
 - [Deploy](#Deploy)
 - [Diagrama de flujo en Git Hub](#Diagrama-de-flujo-en-Git-Hub)
 - [Metodo de organizacion](#Metodo-de-organizacion)
 
-
 ## Autoras ✒️
 
-El equipo de desarrolladoras que colaborarón a levantar el proyecto desde sus inicios
+Este proyecto fue realizado en su totalidad por 5 desarrolladoras que colaboraron para levantar
 
+- Bianca Cardona ([Biancardona](https://github.com/Biancardona)).
+- Claudia Custodio([Dionisiaca](https://github.com/Dionisiaca)).
+- Karen Ramírez ([KARENLABO](https://github.com/KARENLABO)).
 - Monse Salas([MonseSalasVi](https://github.com/MonseSalasVi)).
-- Karen Ramírez ([KarenRamírez](https://github.com/KARENLABO)).
-- Bianca Cardona ([BiancaCardona](https://github.com/Biancardona)).
-- Claudia Custodio([ClaudiaCustodio](https://github.com/Dionisiaca)).
-- Teresa Carbajal ([TeresaCarbajal](https://github.com/TeresaC21)).
+- Teresa Carbajal ([TeresaC21](https://github.com/TeresaC21)).
 
 ## Introduccion
 
-En este proyecto conformado por un equipo de desarrolladoras de 5 mujeres donde nos enfocamos en construir una aplicación para hacer un registro y balance para gestionar el tiempo en las tareas asignadas donde a estas tareas se les incluye un temporizador y mejorar estimacion para los siguientes proyectos. Esto en base a los requerimientos solicitados por la empresa 4040Apps.
+En este proyecto nos enfocamos en construir una aplicación que permitiera al usuario administrar sus tareas del día, llevar un registro de sus tiempos y realizar un balance para gestionar el tiempo dedicado a cada tarea para mejorar los flujos de trabajo. Nos basamos en los requerimientos establecidos por 4040apps.
 
-
-## HISTORIAS DE USUARIO Y SUBTAREAS
+## Historias de usuario y tareas
 
 ### -Sprint 1 📋
 
@@ -180,23 +180,31 @@ Aspectos no funcionales de la historia:
 
 En este proyecto utilizamos:
 
-* [Reactjs](https://reactjs.org/)
- * [create-react-app](https://create-react-app.dev/docs/getting-started)
- * [Electron](https://www.electronjs.org/)
- * [Materialize UI](https://material-ui.com/)
- * [Extensiones de Visual Studio Code](https://code.visualstudio.com/)
-    - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-    - [Simple react snippets](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets)
-    - [Live share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
-    - [Git lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
- 
- ### Herramientas de comunicacion
+- [Reactjs](https://reactjs.org/)
+- [create-react-app](https://create-react-app.dev/docs/getting-started)
+- [Electron](https://www.electronjs.org/)
+- [Material-UI](https://material-ui.com/)
+- [Extensiones de Visual Studio Code](https://code.visualstudio.com/)
+  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  - [Simple react snippets](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets)
+  - [Live share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
+  - [Git lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+
+### Herramientas de comunicacion
+
      * [Trello](https://trello.com/monserratsalas2/boards)
-     * [Slack](https://slack.com/intl/es-mx/) 
+     * [Slack](https://slack.com/intl/es-mx/)
      * [Hangouts](https://hangouts.google.com/)
- 
+
+### Deploy 📦
+
+Para el deploy utilizamos firehosting de firebase
 
 ## Prototipo de alta fidelidad
+
+Realizado en Figma. Basamos el diseño en el branding de 4040apps y en los componentes de Material-UI.
+
+[Link al prototipo](<https://www.figma.com/file/OwlwYTupVQ7WXxdGcivGp1/Task-Manager-(Copy)?node-id=0%3A1>)
 
 ![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/access.png)
 
@@ -212,25 +220,23 @@ En este proyecto utilizamos:
 
 ![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/widget.png)
 
-## Deploy 📦
+## Organización
 
-Para el deploy utilizamos...
+### Método de organización
 
-## Diagrama de flujo en Git Hub
+- Revisión grupal del readme
+- Establecer prioridades
+- Investigar herramientas/documentación
+- Establecer acuerdos
+- Documento del proyecto
+- Definir proridades
+- Asignacion de tareas
+
+### Diagrama de flujo en Git Hub
+
 Todas trabajan sobre su rama Develop.
 Una vez teniendo algo funcional o su tarea terminada, se hace un pull request hacia la rama develop de la master.
 La Develop master Verifica que todo funcione bien y se hace un pull a la Rama master.
 Para bajar los cambios de la master, tenemos una rama remota, y bajamos sus cambios.
 
 ![alt text](https://github.com/TeresaC21/TalentApp/blob/develop/img/Diagram.png)
-
-## Metodo de organizacion
- - Revisión grupal del readme
- - Establecer prioridades
- - Investigar herramientas/documentación
- - Establecer acuerdos
- - Documento del proyecto
- - Definir proridades
- - Asignacion de tareas
-
-
