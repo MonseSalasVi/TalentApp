@@ -8,13 +8,13 @@ import Stats from "./components/stats";
 function App() {
   return (
     <Router>
-      <Route exact path="/" component={Access} />
+      <Route exact path="/" component={Access} />{" "}
       <Menu>
         <Switch>
-          <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/dashboard" component={Stats} />
-        </Switch>
-      </Menu>
+          <Route exact path="/dashboard" component={Dashboard} />{" "}
+          <Route exact path="/dashboard" component={Stats} />{" "}
+        </Switch>{" "}
+      </Menu>{" "}
     </Router>
   );
 }
