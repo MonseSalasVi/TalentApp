@@ -37,16 +37,6 @@ const Access = () => {
 
   async function searchUserinData() {
     try {
-      const response = await getStaffs(user);
-      setIdUser(response[0].staffid);
-      history.push("/dashboard");
-    } catch (error) {
-      alert("Por Favor Revise sus datos y vuelta a intentar");
-    }
-  }
-
-  async function searchUserinData() {
-    try {
       const response = await getStaffs(email);
       const obj = new Object();
       obj.staffid = response[0].staffid;
@@ -59,7 +49,6 @@ const Access = () => {
   }
 
   const classes = useStyles();
-
   return (
     <Grid container direction="column" justify="center" alignItems="center">
       <h1 className={classes.h1}>Task Manager</h1>
@@ -68,10 +57,10 @@ const Access = () => {
         className={classes.input}
         type="email"
         onChange={(e) => {
-          setUser(e.target.value);
+          setEmail(e.target.value);
         }}
         id="outlined-basic"
-        label="correo"
+        label="email"
         variant="outlined"
       />
 
