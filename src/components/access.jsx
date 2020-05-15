@@ -19,11 +19,13 @@ const useStyles = makeStyles((theme) => ({
   },
   p: {
     color: "#C4C4C4",
+    fontFamily: "Roboto",
   },
   h1: {
     color: "#234C5B",
     fontSize: "50px",
     margin: "5% 0 0 0",
+    fontFamily: "Roboto",
   },
 }));
 
@@ -47,7 +49,6 @@ const Access = () => {
   }
 
   const classes = useStyles();
-
   return (
     <Grid container direction="column" justify="center" alignItems="center">
       <h1 className={classes.h1}>Task Manager</h1>

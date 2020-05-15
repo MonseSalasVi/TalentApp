@@ -1,31 +1,18 @@
 .Counter {
   display: flex;
-  flex-direction: column;
   height: 90px;
   width: 155px;
-  border-radius: 15px;
-}
-
-.CounterName {
-  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .CounterTime {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  padding-right: 5px;
 }
 
-.btnCount {
-  background-color: transparent;
-  border-radius: 50%;
-  height: auto;
-  width: auto;
-  font-size: 20px;
-  border: transparent;
-}
-
-.btnCount:hover {
-  background-color: white;
-  color: #c2c2ff;
+.timer {
+  color: #fad000;
 }
