@@ -1,24 +1,70 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./Counter.css";
+import { render } from "@testing-library/react";
 
-const Counter = () => {
-  return (
-    <div className="Counter">
-      <div className="CounterName">
-        <h1> Tarea </h1>
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      actualTime: 0,
+      btnPlayPause: "Play",
+    };
+
+    this.counter = null;
+    this.initTimer = this.initTimer.bind(this);
+    this.clearTimer = this.clearTimer.bind(this);
+    this.pauseTimer = this.pauseTimer.bind(this);
+  }
+
+  initTimer() {
+    if (this.counter) {
+      this.pauseTimer();
+      this.setState({ btnPlayPause: "Play" });
+    } else {
+      this.counter = setInterval(() => {
+        this.setState({ actualTime: this.state.actualTime + 0.1 });
+      }, 100);
+      this.setState({ btnPlayPause: "Pause" });
+    }
+  }
+
+  pauseTimer() {
+    clearInterval(this.counter);
+    this.counter = null;
+  }
+
+  clearTimer() {
+    this.setState({ actualTime: 0 });
+    clearInterval(this.counter);
+    this.counter = null;
+    this.setState({ btnPlayPause: "Play" });
+  }
+
+  render() {
+    return (
+      <div className="Counter">
+        <div className="CounterName">
+          <h1> Tarea </h1>
+        </div>
+        <div className="CounterTime">
+          <input
+            className="btnCount"
+            type="button"
+            value={this.state.btnPlayPause}
+            onClick={this.initTimer}
+          />
+          <input
+            className="btnCount"
+            type="button"
+            value="Clear"
+            onClick={this.clearTimer}
+          />
+          <h2> {this.state.actualTime.toFixed(2)}</h2>
+        </div>
       </div>
-      <div className="CounterTime">
-        <input
-          className="btnCount"
-          type="button"
-          value="  > ||"
-          // onClick={this.initTimer}
-        />
-        <input type="button" value="Clean" />
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Counter;
