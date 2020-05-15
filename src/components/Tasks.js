@@ -1,5 +1,4 @@
 import React from "react";
-
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -8,8 +7,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Counter from "../Counter/Counter";
+import Counter from "./Counter/Counter";
 
 const useStyles = makeStyles({
   table: {
@@ -27,6 +25,18 @@ const StyledTableCell = withStyles((theme) => ({
   },
 }))(TableCell);
 
+function createData(name, calories, fat, carbs, protein) {
+  return { name, calories, fat, carbs, protein };
+}
+
+const rows = [
+  createData("Frozen yoghurt", 159, 6.0, 24),
+  createData("Ice cream sandwich", 237, 9.0, 37),
+  createData("Eclair", 262, 16.0, 24),
+  createData("Cupcake", 305, 3.7, 67),
+  createData("Gingerbread", 356, 16.0, 49),
+];
+
 const Tasks = ({ tasks }) => {
   console.log(tasks);
   
@@ -36,9 +46,7 @@ const Tasks = ({ tasks }) => {
     console.log(timeBlock);
   };
 
-  return (!tasks ? (
-    <CircularProgress />
-  ) : (
+  return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
@@ -46,7 +54,6 @@ const Tasks = ({ tasks }) => {
             <StyledTableCell>Tarea</StyledTableCell>
             <StyledTableCell align="right">ID de Tarea</StyledTableCell>
             <StyledTableCell align="right">ID de Proyecto</StyledTableCell>
-            <StyledTableCell align="right">Deadline</StyledTableCell>
             <StyledTableCell align="right">Temporizador</StyledTableCell>
           </TableRow>
         </TableHead>
@@ -66,7 +73,7 @@ const Tasks = ({ tasks }) => {
         </TableBody>
       </Table>
     </TableContainer>
-  ));
+  );
 };
 
 export default Tasks;

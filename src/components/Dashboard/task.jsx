@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getTasks } from "../../UseFetch";
+// import { getTasks } from "../../UseFetch";
 import Fab from "@material-ui/core/Fab";
 
 // Css Materia-ui
@@ -21,15 +21,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Task = ({ taskId }) => {
+const Task = ({ task }) => {
+  console.log(task);
+  
   const classes = useStyles();
-  const [task, setTask] = useState(null);
+  // const [task, setTask] = useState(null);
 
-  useEffect(() => {
-    getTasks(taskId).then((data) => {
-      setTask(data);
-    });
-  }, [taskId]);
+  // useEffect(() => {
+  //   getTasks(taskId).then((data) => {
+  //     setTask(data);
+  //   });
+  // }, [taskId]);
 
   return !task ? (
     <CircularProgress />

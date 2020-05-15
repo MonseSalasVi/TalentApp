@@ -6,18 +6,17 @@ import { allTasks } from "../../UseFetch";
 import Tasks from "./Tasks";
 import { CardContent } from "@material-ui/core";
 
-const Project = () => {
-  const [tasks, setTasks] = useState(null);
+const Project = ({tasks}) => {
+  // console.log(tasks);
+  
+  const mystyle = {
+    color: "grey",
+    fontSize: "1.5rem",
+    fontFamily: "Arial",
+  };
 
-  useEffect(() => {
-    allTasks().then((data) => {
-      setTasks(data);
-    });
-  }, []);
 
-  return !tasks ? (
-    <CircularProgress />
-  ) : (
+  return (
     <>
       <div>
         <Divider variant="middle" />
@@ -25,10 +24,11 @@ const Project = () => {
       <div>
         <Card>
           <CardContent>
-            <Tasks tasks={tasks} />{" "}
-          </CardContent>{" "}
-        </Card>{" "}
-      </div>{" "}
+            {/* {tasks.map(item => ( <Tasks task={item} /> ))} */}
+            <Tasks tasks={tasks} />
+          </CardContent>
+        </Card>
+      </div>
     </>
   );
 };
