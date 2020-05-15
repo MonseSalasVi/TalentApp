@@ -1,8 +1,6 @@
 const token =
     "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoic3F1YWQ0IiwibmFtZSI6InNxdWFkIGZvdXIiLCJwYXNzd29yZCI6bnVsbCwiQVBJX1RJTUUiOjE1ODk0Njg2Mjh9.u__YkhNdmlvnRUj_qwG9UJJK2BV-rxpYsqd34m73XZQ";
-//const cubosApiUrl = "https://cubosv2.4040.wtf/api/";
 const tasksEndpoint = "https://cubosv2.4040.wtf/api/tasks/";
-const staffsEndpoint = "https://cubosv2.4040.wtf/api/staffs/";
 const staffsEndpointSearch = "https://cubosv2.4040.wtf/api/staffs/search/";
 const projectsEndpoint = "https://cubosv2.4040.wtf/api/projects/";
 const allTasksEndpoint = "https://cubosv2.4040.wtf/api/tasks/search/?keysearch=";
