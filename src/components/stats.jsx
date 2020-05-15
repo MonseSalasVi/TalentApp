@@ -1,5 +1,6 @@
 import React from "react";
 import Counter from "./Counter/Counter.jsx";
+
 const Stats = () => {
   return (
     <>
